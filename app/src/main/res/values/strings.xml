@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">벨포레</string>
+    <string name="login_hello">안녕하세요.</string>
+    <string name="login_prompt">로그인 해주세요.</string>
+    <string name="login_user_name">%s님</string>
+    <!--<string name="login_grade">회원님의 현재 등급은 &lt;b>&lt;font color="#ad1410">%s&lt;/font>&lt;/b>입니다.</string>-->
+    <string name="login_grade">회원님의 현재 등급은 %s입니다.</string>
+    <string name="buy_ticket">티켓구매</string>
+    <string name="my_ticket">마이티켓</string>
+    <string name="temp_c">%s&#176;C</string>
+    <string name="wind_speed">%s m/s</string>
+    <string name="back_pressed_prompt">\'뒤로\' 버튼을 한번 더 누르면 종료됩니다.</string>
+    <string name="notice">알림</string>
+    <string name="privacy_policy_prompt">* 벨포레 앱은 회원가입 시 사용자 휴대폰 번호를 수집하고 있습니다. 휴대폰 번호는 회원 관리와 메시징 서비스 목적 이외에 다른 용도로 사용하지 않습니다.</string>
+    <string name="added_to_basket">장바구니에 상품을 담았습니다.</string>
+    <string name="version_policy_prompt">벨포레 앱을 이용해 주셔서 감사합니다.
+더욱 안정적이고 원활한 서비스 운영을 위해 Andorid 8.0 Oreo(오레오) 미만 버전에서는 벨포레 앱이 지원되지 않습니다.
+지원되지 않는 점에 대해 양해의 말씀을 드리며, Andorid 8.0 Oreo(오레오) 미만 버전을 사용하고 계시다면, 보다 안정적인 서비스 이용을 위해 최신 버전의 OS로 업데이트 부탁드립니다.</string>
+    <string name="waiting_time">대기시간</string>
+    <string name="my_page">마이페이지</string>
+    <string name="webview_error_prompt">&lt;b>잠시 후 다시 시도해주세요.&lt;/b>&lt;br /&gt;
+    서버로부터 응답이 없습니다.&lt;br /&gt;
+    지속적으로 발생할 경우 고객센터(1566-0162)로 문의해주세요.</string>
+</resources>

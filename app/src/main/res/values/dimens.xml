@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navigation_bar_height">56sp</dimen>
+    <dimen name="tab_bar_height">63sp</dimen>
+    <dimen name="waiting_time_button_height">50sp</dimen>
+    <!-- Navigation Bar -->
+    <dimen name="navigation_bar_title_text_size">16sp</dimen>
+    <!-- Tab Bar -->
+    <dimen name="tab_bar_text_size">10sp</dimen>
+    <!-- NavigationView -->
+    <dimen name="nav_header_height">56sp</dimen>
+    <dimen name="nav_separate_height">8sp</dimen>
+    <dimen name="nav_btn_text_size">10sp</dimen>
+    <dimen name="nav_text_size_normal">14sp</dimen>
+    <dimen name="nav_text_size_large">20sp</dimen>
+    <dimen name="weather_text_size">12sp</dimen>
+    <!-- Expandable Menu -->
+    <dimen name="top_menu_item_height">56sp</dimen>
+    <dimen name="sub_menu_item_height">28sp</dimen>
+    <dimen name="menu_text_size">14sp</dimen>
+    <!-- TextView -->
+    <dimen name="common_textview_height">20sp</dimen>
+    <dimen name="large_textview_height">24sp</dimen>
+    <!-- Dialog -->
+    <dimen name="dialog_title_bar_height">56sp</dimen>
+</resources>

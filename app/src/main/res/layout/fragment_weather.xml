@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_weather"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:layout_height="@dimen/nav_header_height"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_sky"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_zone"
+        style="@style/SpoqaHanSansNeoText.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/weather_text_size"
+        app:layout_constraintBottom_toTopOf="@id/tv_temp"
+        app:layout_constraintStart_toEndOf="@id/iv_sky"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="증평군" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        style="@style/SpoqaHanSansNeoText.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/weather_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_zone"
+        app:layout_constraintTop_toBottomOf="@id/tv_zone"
+        tools:text="@string/temp_c" />
+
+    <ImageView
+        android:id="@+id/iv_wd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/wind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_zone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ws"
+        style="@style/SpoqaHanSansNeoText.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/weather_text_size"
+        app:layout_constraintBottom_toTopOf="@id/tv_wd"
+        app:layout_constraintStart_toEndOf="@id/iv_wd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="1.6 m/s" />
+
+    <TextView
+        android:id="@+id/tv_wd"
+        style="@style/SpoqaHanSansNeoText.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/weather_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_ws"
+        app:layout_constraintTop_toBottomOf="@id/tv_ws"
+        tools:text="남동" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

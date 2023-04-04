@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="false"
+    android:maxWidth="360dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_nav_header"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/nav_header_height"
+            android:paddingStart="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Weather -->
+            <fragment
+                android:id="@+id/weatherFragment"
+                android:name="com.hybridApp.sample.weather.WeatherFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Close button -->
+            <LinearLayout
+                android:id="@+id/ll_drawer_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_delete_filled"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_nav_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_nav_header">
+
+            <LinearLayout
+                android:id="@+id/ll_login_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/SpoqaHanSansNeoText.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_hello"
+                    android:textSize="@dimen/nav_text_size_normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_login"
+                        style="@style/SpoqaHanSansNeoText.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:lineSpacingExtra="0sp"
+                        android:text="@string/login_prompt"
+                        android:textSize="@dimen/nav_text_size_large" />
+
+                    <TextView
+                        android:id="@+id/tv_my_page"
+                        style="@style/SpoqaHanSansNeoText.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/my_page"
+                        android:textSize="@dimen/nav_text_size_normal"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/btn_my_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/icon_arrow_right" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_login_grade"
+                    style="@style/SpoqaHanSansNeoText.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/login_grade"
+                    android:textSize="@dimen/nav_text_size_normal"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.206"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_login_area"
+                app:layout_constraintVertical_bias="0.238">
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="예약확인\n및 취소" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="28dp"
+                    android:background="#f2f2f2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ll_golf_list"
+                    app:layout_constraintStart_toEndOf="@+id/tv_info"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_golf_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="22dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/ll_condo_list"
+                    app:layout_constraintStart_toEndOf="@id/view"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <TextView
+                        android:id="@+id/tv_golf_list"
+                        style="@style/SpoqaHanSansNeoText.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/main_golf_s_icon"
+                        android:gravity="center"
+                        android:text="골프"
+                        android:textSize="@dimen/nav_btn_text_size" />
+                    <TextView
+                        android:id="@+id/txt_golf_count"
+                        style="@style/CartItemCount"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="-17dp"
+                        android:layout_marginStart="-15dp"
+                        android:background="@drawable/oval_00a9b7"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ll_my_ticket"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_condo_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="22dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/ll_my_ticket"
+                    app:layout_constraintStart_toEndOf="@+id/ll_golf_list">
+
+                    <TextView
+                        android:id="@+id/tv_condo_list"
+                        style="@style/SpoqaHanSansNeoText.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/main_condo_s_icon"
+                        android:gravity="center"
+                        android:text="콘도"
+                        android:textSize="@dimen/nav_btn_text_size" />
+                    <TextView
+                        android:id="@+id/txt_condo_count"
+                        style="@style/CartItemCount"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="-17dp"
+                        android:layout_marginStart="-15dp"
+                        android:background="@drawable/oval_00a9b7"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ll_my_ticket"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ll_condo_list"
+                    tools:layout_editor_absoluteY="1dp">
+
+                    <TextView
+                        android:id="@+id/tv_my_ticket"
+                        style="@style/SpoqaHanSansNeoText.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/main_ticket_s_icon"
+                        android:gravity="center"
+                        android:text="티켓"
+                        android:textSize="@dimen/nav_btn_text_size" />
+                    <TextView
+                        android:id="@+id/txt_my_ticket_count"
+                        style="@style/CartItemCount"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="-17dp"
+                        android:layout_marginStart="-15dp"
+                        android:background="@drawable/oval_00a9b7"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ll_my_ticket"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="3" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/nav_separate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/nav_separate_height"
+            android:background="#f3f3f3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_nav_body" />
+
+
+        <fragment
+            android:id="@+id/expandableMenuFragment"
+            android:name="com.hybridApp.sample.expandablemenu.ExpandableMenuFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nav_separate" />
+
+        <!--
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nav_separate">
+
+            <LinearLayout
+                android:id="@+id/fl_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/expandableMenuFragment"
+                    android:name="com.blackstone.belleforet.expandablemenu.ExpandableMenuFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.navigation.NavigationView>
